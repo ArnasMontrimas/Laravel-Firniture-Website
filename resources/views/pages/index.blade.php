@@ -4,6 +4,8 @@
     <main>
         <header class="index-header">
             <h1>Login Credentials</h1>
+            <p>Demo User</p>
+            <p>Email: test@test.com | Password: test</p>
         </header>
         <div class="container">
             <form action="/" method="post" class="form">
