@@ -1,0 +1,36 @@
+.pagination-nav {
+
+    ul {
+        display: flex;
+        margin-bottom: 0;
+        padding-inline-start: 30px;
+        
+        .disabled, .active {
+            cursor: no-drop;
+        }
+
+        .active {
+            background-color: $accent-color;
+        }
+
+        li {
+            @extend %button;
+            padding: 0 5px;
+            margin: 0 5px;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+            }
+
+            a:visited, a {
+                color: $text-color;
+            }
+        }
+
+        li:hover {
+            @extend %buttonHover;
+        }
+    }
+
+}

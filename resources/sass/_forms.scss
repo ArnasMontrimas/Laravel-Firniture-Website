@@ -1,0 +1,90 @@
+%flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+%formInputsBottomMargin {
+    margin: 0 0 17px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-email > input {
+        @extend %input;
+    }
+
+    &-password > input {
+        @extend %input;
+    }
+
+    &-submit > input {
+        @extend %button;
+    }
+
+    &-submit > input:hover {
+        @extend %buttonHover
+    }
+
+    &-productName, &-productCategory, 
+    &-productPrice, &-productCost, 
+    &-productParts, &-productBuildTime, &-timesheetDate, 
+    &-timesheetMonday, &-timesheetTuesday, &-timesheetWednesday,
+    &-timesheetThursday, &-timesheetFriday, &-timesheetSaturday {
+        @extend %flexColumn;
+        input {
+            @extend %input;
+            @extend %formInputsBottomMargin;
+        }
+    }
+
+    &-productImage {
+        label {
+            margin-bottom: 5px;
+        }
+        @extend %flexColumn;
+    }
+
+    &-employee-general {
+        .form-employeeName, .form-employeeSurname,
+        .form-employeeEmail, .form-employeePassword, 
+        .form-employeeSalary {
+            @extend %flexColumn;
+            input {
+                @extend %input;
+                @extend %formInputsBottomMargin;
+            }
+        }
+        .form-employeeType {
+            @extend %flexColumn;
+            select {
+                color: $text-color;
+                @extend %input;
+                @extend %formInputsBottomMargin;
+            }
+        }
+    }
+
+    &-timesheetProduct, &-timesheetEmployee {
+        @extend %flexColumn;
+            select {
+                color: $text-color;
+                @extend %input;
+                @extend %formInputsBottomMargin;
+            }
+    }
+
+    &-employee-address {
+        .form-employeeCity, .form-employeeStreet,
+        .form-employeePostcode {
+            @extend %flexColumn;
+            input {
+                @extend %input;
+                @extend %formInputsBottomMargin;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+%dropdownStyle {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+    background-color: lighten($primary-color, 10%);
+    border-radius: 3px;
+
+    z-index: 5;
+
+    li {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    li:hover {
+        transition: background-color .1s ease-in;
+        background-color: $accent-color;
+    }
+    li:nth-child(1) {
+        margin-top: 10px;
+    }
+    li:last-child() {
+        margin-bottom: 10px;
+    }
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+
+    nav {
+        width: 100%;
+        background-color: $primary-color;
+        border-bottom: 3px solid $accent-color;
+    
+        a {
+            text-decoration: none;
+            color: $text-color;
+            font-size: 1.4rem;
+        }
+    
+        ul {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-around;
+            padding-inline-start: unset;
+    
+            li {
+                list-style: none;
+            }
+        }
+    
+        .product-dropdown, .employee-dropdown, .timesheet-dropdown {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .employees:hover, .timesheets:hover, .products:hover {
+            .employee-dropdown, .timesheet-dropdown {
+                @extend %dropdownStyle;
+                width: 134.27px;
+            }
+            .product-dropdown {
+                @extend %dropdownStyle;
+                width: 111.86px;
+            }
+        }
+    
+        svg {
+            fill: $accent-color;
+        }
+    }
+}
+
+

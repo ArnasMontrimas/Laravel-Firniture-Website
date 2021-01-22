@@ -1,0 +1,92 @@
+.alert-container {
+    display: flex;
+    justify-content: center;
+
+    .alert-success {
+        @extend %flexColumn;
+        background-color: #008c00;
+        margin-bottom: 20px;
+        width: 70%;
+        max-width: 700px;
+        padding: 10px;
+        border: 2px solid lighten(green, 40%);
+        border-radius: 5px;
+    }
+
+    .alert-danger {
+        @extend %flexColumn;
+        background-color: lighten(red, 20%);
+        margin-bottom: 20px;
+        width: 70%;
+        max-width: 700px;
+        padding: 10px;
+        border: 2px solid #ff8888;
+        border-radius: 5px;
+        .exit-button {
+            font-size: 1.3rem;
+            font-weight: 900;
+            width: fit-content;
+            height: 0;
+            position: relative;
+            top: -9px;
+            left: 98%;
+            cursor: pointer;
+            transition: color .2s ease-in;
+        }
+        .exit-button:hover {
+            color: darken(red, 50);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+        }
+        ul {
+            margin: 0;
+            list-style: none;
+            padding-inline-start: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        h3 {
+            margin-top: 8px;
+        }
+    }
+
+}
+
+.success-alert-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    .alert-success {
+        @extend %flexColumn;
+        background-color: #008c00;
+        margin-bottom: 20px;
+        width: 60%;
+        max-width: 700px;
+        padding: 10px;
+        border: 2px solid lighten(green, 40%);
+        border-radius: 5px;
+
+        .exit-button {
+            font-size: 1.3rem;
+            font-weight: 900;
+            width: fit-content;
+            height: 0;
+            position: relative;
+            top: -9px;
+            left: 98%;
+            cursor: pointer;
+            transition: color .2s ease-in;
+        }
+        .exit-button:hover {
+            color: darken(red, 50);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

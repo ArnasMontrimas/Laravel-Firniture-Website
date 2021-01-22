@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'inputs';
+@import 'buttons';
+@import 'navbar';
+@import 'cards';
+@import 'forms';
+@import 'alerts';
+@import 'pagination';
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  font-family: $font-stack;
+  font-size: 1rem;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body { 
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    min-width: 700px;
+}
+
+.index-header, .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        padding: 20px;
+        font-size: 2.8rem;
+    }
+}
+
+.home-container, .index-page-container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
