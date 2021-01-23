@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\App\Database\Seeds\AddressSeder;
-use Illuminate\App\Database\Seeds\EmployeeSeder;
-use Illuminate\App\Database\Seeds\ProductSeeder;
 
 class DatabaseSeeder extends Seeder
 {
