@@ -6,6 +6,7 @@ use App\Http\Requests\EmployeeRequest;
 use Illuminate\Support\Facades\Hash;
 use App\Employee;
 use App\Address;
+use Carbon\Carbon;
 
 class EmployeeController extends Controller
 {
@@ -62,6 +63,7 @@ class EmployeeController extends Controller
         $emp->password = Hash::make($request->input('employeePassword'));
         $emp->type = $request->input('types');
         $emp->salary = $request->input('employeeSalary');
+        $emp->start_date = Carbon::now()->toDateTimeString();
         $emp->save();
 
         return redirect("/employee/create")->with("success", 'Employee added successfuly');
