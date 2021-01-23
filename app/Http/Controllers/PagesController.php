@@ -37,7 +37,7 @@ class PagesController extends Controller
         //Select the employees which are not the ones who are working on something
         $employees = DB::table('employees')->whereNotIn('id', $employeesIds->toArray())->where('type', 'production')->get();
 
-        $products = DB::table('products')->whereRaw('status = "waiting" AND id NOT IN (SELECT product_id FROM timesheets)')->get();
+        $products = DB::table('products')->whereRaw("status = 'waiting' AND id NOT IN (SELECT product_id FROM timesheets)")->get();
 
         //dd($employees);
         return view("pages.selectEmployeeProductForTimesheet", [
