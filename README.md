@@ -6,7 +6,7 @@
 </p>
 
 ## About
----
+
 #### Website for Furniture Manufacturer
 This website allows a Furniture Manufacturer to assign a Supervisor who will create timesheets for employees who are working on products the products are furniture. The Supervisor specifies how many hours each week did a particular employee work on a particular product and specifies if the product was completed that given week for which the timesheet is being entered.
 When a timesheet is made an automatic job order number is assigned which links to the timesheet, employee and product.
@@ -16,7 +16,6 @@ There are also Admin users who may enter timesheets aswell, but they can add new
 Lastly there are Production type users which may enter the website to take a look at the products which are waiting for someone to start building them.
 
 ## Functionality
----
 * 3 Roles (Admin,Supervisor,Production)
 * Login - Roles All
 * View Products - Roles All
@@ -40,5 +39,4 @@ Lastly there are Production type users which may enter the website to take a loo
 
 
 ## License
-
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
