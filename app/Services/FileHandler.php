@@ -22,7 +22,7 @@ class FileHandler {
                 $imageToStore = $imageName.'_'.time().'.'.$imageExt;
 
                 //Store file in storage
-                $path = $request->productImage->storeAs('public/images', $imageToStore);
+                $path = $request->productImage->storeAs('public/storage/images', $imageToStore);
             }
         }
 
@@ -31,8 +31,8 @@ class FileHandler {
 
     static function deleteOldFile($product) {
         //Delete Old File
-        if(file_exists(storage_path("app/public/images/$product->img")) && $product->img != 'noimage.jpg') {
-            unlink(storage_path("app/public/images/$product->img"));
+        if(file_exists(storage_path("public/storage/images/$product->img")) && $product->img != 'noimage.jpg') {
+            unlink(storage_path("public/storage/images/$product->img"));
         }
     }
 
