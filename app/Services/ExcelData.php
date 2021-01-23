@@ -19,7 +19,7 @@ class ExcelData {
             FROM products AS p, timesheets AS t, employees AS e 
             WHERE t.product_id = p.id 
             AND t.employee_id = e.id
-            AND t.weekEnding BETWEEN ? AND ? AND p.status = ? 
+            AND "t"."weekEnding" BETWEEN ? AND ? AND p.status = ? 
             GROUP BY p.id, p.name, p.type, t.employee_id, p.build_time, p.selling_price, e.salary',
         [$date1, $date2, 'completed']);
 
