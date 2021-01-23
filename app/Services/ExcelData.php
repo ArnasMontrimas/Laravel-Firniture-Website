@@ -16,7 +16,7 @@ class ExcelData {
             p.selling_price as "Product Selling Price",
             round((((e.salary/52)/48) * sum((t.monday + t.tuesday + t.wednesday + t.thursday + t.friday + t.saturday))), 2) as "Cost To Build",
             round((p.selling_price - e.salary/52/48)::numeric * sum(t.monday + t.tuesday + t.wednesday + t.thursday + t.friday + t.saturday)::numeric, 2) as "Net Profit"
-            FROM products p, timesheets t, employees e 
+            FROM products AS p, timesheets AS t, employees AS e 
             WHERE t.product_id = p.id 
             AND t.employee_id = e.id
             AND t.weekEnding BETWEEN ? AND ? AND p.status = ? 
