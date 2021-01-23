@@ -14,9 +14,9 @@ class AddressSeeder extends Seeder
     public function run()
     {
         DB::table("addresses")->insert([
-            'city' => String::random(10),
-            'street' => String::random(10),
-            'post_code' => String::random(7)
+            'city' => Str::random(10),
+            'street' => Str::random(10),
+            'post_code' => Str::random(7)
         ]);
     }
 }
