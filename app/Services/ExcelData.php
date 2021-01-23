@@ -14,8 +14,8 @@ class ExcelData {
             p.build_time as "Estimated Build Time", 
             sum((t.monday + t.tuesday + t.wednesday + t.thursday + t.friday + t.saturday)) as "Actual Build Time", 
             p.selling_price as "Product Selling Price",
-            round((((e.salary/52)/48) * sum((t.monday + t.tuesday + t.wednesday + t.thursday + t.friday + t.saturday))), 2) as "Cost To Build",
-            round(p.selling_price - e.salary/52/48 * sum(t.monday + t.tuesday + t.wednesday + t.thursday + t.friday + t.saturday), 2) as "Net Profit"
+            round((((e.salary/52.0)/48.0) * sum((t.monday + t.tuesday + t.wednesday + t.thursday + t.friday + t.saturday))), 2) as "Cost To Build",
+            round((p.selling_price - e.salary/52.0/48.0) * sum(t.monday + t.tuesday + t.wednesday + t.thursday + t.friday + t.saturday), 2) as "Net Profit"
             FROM products p, timesheets t, employees e 
             WHERE t.product_id = p.id 
             AND t.employee_id = e.id
