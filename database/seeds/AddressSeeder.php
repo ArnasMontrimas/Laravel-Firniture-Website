@@ -18,5 +18,25 @@ class AddressSeeder extends Seeder
             'street' => Str::random(10),
             'post_code' => Str::random(7)
         ]);
+        DB::table("addresses")->insert([
+            'city' => Str::random(10),
+            'street' => Str::random(10),
+            'post_code' => Str::random(7)
+        ]);
+        DB::table("addresses")->insert([
+            'city' => Str::random(10),
+            'street' => Str::random(10),
+            'post_code' => Str::random(7)
+        ]);
+        DB::table("addresses")->insert([
+            'city' => Str::random(10),
+            'street' => Str::random(10),
+            'post_code' => Str::random(7)
+        ]);
+        DB::table("addresses")->insert([
+            'city' => Str::random(10),
+            'street' => Str::random(10),
+            'post_code' => Str::random(7)
+        ]);
     }
 }
