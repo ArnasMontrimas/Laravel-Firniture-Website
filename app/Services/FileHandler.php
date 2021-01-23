@@ -22,7 +22,7 @@ class FileHandler {
                 $imageToStore = $imageName.'_'.time().'.'.$imageExt;
 
                 //Store file in storage
-                $path = $request->productImage->storeAs('storage/images', $imageToStore);
+                $path = $request->productImage->storeAs('storage/images/', $imageToStore);
             }
         }
 
